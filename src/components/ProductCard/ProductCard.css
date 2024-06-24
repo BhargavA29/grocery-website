@@ -1,0 +1,123 @@
+.product-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 250px;
+  margin: 10px;
+  flex: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-details {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product-name {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.product-weight {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.product-prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 18px;
+  color: #333;
+}
+
+.product-original-price {
+  font-size: 14px;
+  color: #777;
+  text-decoration: line-through;
+}
+
+.product-discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #f00;
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.add-to-cart-button {
+  padding: 10px 20px;
+  border: 1px solid #ff6f61;
+  background-color: #fff;
+  color: #ff6f61;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: auto; /* Ensure the button stays at the bottom */
+  width: 140px; /* Fixed width for consistency */
+  text-align: center; /* Center the button text */
+}
+
+.add-to-cart-button:hover {
+  background-color: #ff6f61;
+  color: #fff;
+}
+
+.cart-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto; /* Ensure the controls stay at the bottom */
+}
+
+.cart-button {
+  padding: 5px 10px;
+  border: 1px solid #ff6f61;
+  background-color: #fff;
+  color: #ff6f61;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cart-button:hover {
+  background-color: #ff6f61;
+  color: #fff;
+}
+
+.cart-quantity {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

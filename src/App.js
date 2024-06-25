@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import CartPage from './pages/CartPage/CartPage';
 import OrderStatusPage from './pages/OrderStatusPage/OrderStatusPage';
+
 import './App.css';
 
 

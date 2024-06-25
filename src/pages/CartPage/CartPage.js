@@ -39,7 +39,7 @@ const CartPage = () => {
                         )}
                       </div>
                       <div className="cart-item-controls">
-                        <button onClick={() => removeFromCart(item)} className="cart-button">-</button>
+                        <button onClick={() => removeFromCart(item.id)} className="cart-button">-</button>
                         <span className="cart-quantity">{item.quantity}</span>
                         <button onClick={() => addToCart(item)} className="cart-button">+</button>
                       </div>

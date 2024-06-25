@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
         </div>
         {cartItem ? (
           <div className="cart-controls">
-            <button onClick={() => removeFromCart(product)} className="cart-button">-</button>
+            <button onClick={() => removeFromCart(product.id)} className="cart-button">-</button>
             <span className="cart-quantity">{cartItem.quantity}</span>
             <button onClick={() => addToCart(product)} className="cart-button">+</button>
           </div>

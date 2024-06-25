@@ -5,9 +5,7 @@ import ProductsPage from './pages/ProductsPage/ProductsPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import CartPage from './pages/CartPage/CartPage';
-
-//import Header from './components/Header/Header';
-//import Footer from './components/Footer/Footer';
+import OrderStatusPage from './pages/OrderStatusPage/OrderStatusPage';
 import './App.css';
 
 
@@ -21,6 +19,7 @@ const App = () => {
         <Route path="/account" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/order-status" element={<OrderStatusPage />} />
       </Routes>
 
     </div>

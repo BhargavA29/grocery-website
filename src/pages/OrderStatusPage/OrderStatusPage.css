@@ -1,0 +1,95 @@
+.order-status-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Arial, sans-serif';
+    background-color: #f4f4f4;
+    min-height: calc(100vh - 1000px); /* Adjusted to reduce space at the bottom */
+  }
+  
+  .status-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .progress-container {
+    margin: 20px 0;
+    width: 300px; /* Increased the size of the progress bar */
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .progress-bar .CircularProgressbar-path {
+    stroke: #4caf50;
+  }
+  
+  .progress-bar .CircularProgressbar-trail {
+    stroke: #d6d6d6;
+  }
+  
+  .progress-bar .CircularProgressbar-text {
+    fill: #000;
+    font-size: 10px; /* Reduced the text size */
+  }
+  
+  .order-steps {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .order-step {
+    font-size: 16px;
+    color: #777;
+    transition: color 0.5s, transform 0.5s;
+  }
+  
+  .order-step.completed {
+    color: #4caf50;
+    font-weight: bold;
+    transform: scale(1.1);
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .order-status {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .transaction-id {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  footer {
+    margin: 0; /* Remove margin from the footer for this page */
+  }

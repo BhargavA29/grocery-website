@@ -1,0 +1,22 @@
+/* src/components/CheckoutForm/CheckoutForm.css */
+.checkout-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .checkout-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6f61;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+  }
+  
+  .checkout-form button:hover {
+    background-color: #e65c50;
+  }
+  

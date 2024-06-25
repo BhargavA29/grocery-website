@@ -4,12 +4,52 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import emptyCartImage from '../../assets/images/empty-cart.png'; // Ensure this path is correct
 import './CartPage.css';
+import { useNavigate } from 'react-router-dom';
 
 const CartPage = () => {
   const { cart, addToCart, removeFromCart, clearCart } = useCart();
+  const navigate = useNavigate();
 
   const getTotalPrice = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
+  const handleCheckout = () => {
+    const totalPrice = getTotalPrice();
+    console.log('Total Price:', totalPrice);
+
+    const options = {
+      key: 'rzp_test_KUuGtEkdL5tXDf', // Replace with your Razorpay key ID
+      amount: totalPrice * 100, // Razorpay works with smallest currency unit
+      currency: 'INR',
+      name: 'QuickCart',
+      description: 'Test Transaction',
+      image: 'https://example.com/your_logo', // Replace with your logo URL
+      handler: function (response) {
+        console.log('Payment Successful! Payment ID:', response.razorpay_payment_id);
+        clearCart();
+        navigate('/order-status', { state: { transactionId: response.razorpay_payment_id } });
+      },
+      prefill: {
+        name: 'Your Name',
+        email: 'youremail@example.com',
+        contact: '9999999999',
+      },
+      notes: {
+        address: 'QuickCart Corporate Office',
+      },
+      theme: {
+        color: '#ff6f61',
+      },
+    };
+
+    console.log('Razorpay Options:', options);
+
+    const razorpay = new window.Razorpay(options);
+    razorpay.on('payment.failed', function (response) {
+      alert('Payment Failed! Please try again.');
+    });
+    razorpay.open();
   };
 
   return (
@@ -53,7 +93,7 @@ const CartPage = () => {
                   Total Price: <span className="total-price">₹{getTotalPrice()}</span>
                 </p>
                 <button onClick={clearCart} className="clear-cart-button">Clear Cart</button>
-                <button className="checkout-button">Proceed to Checkout</button>
+                <button onClick={handleCheckout} className="checkout-button">Proceed to Checkout</button>
               </div>
             </>
           )}

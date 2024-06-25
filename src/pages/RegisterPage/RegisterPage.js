@@ -88,7 +88,7 @@ const RegisterPage = () => {
             <button type="submit" className="register-button">Register</button>
           </form>
           <p className="login-link">
-            Already have an account? <a href="/login">Login here</a>
+            Already have an account? <a href="/account">Login here</a>
           </p>
         </div>
       </main>

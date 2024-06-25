@@ -5,9 +5,6 @@ import ProductsPage from './pages/ProductsPage/ProductsPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import CartPage from './pages/CartPage/CartPage';
-
-//import Header from './components/Header/Header';
-//import Footer from './components/Footer/Footer';
 import './App.css';
 
 
